@@ -11,7 +11,7 @@ public class AnswerButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI answerText;
 
     // To make it ask a new question after the first question
-    //[SerializeField] private QuestionSetup questionSetup;
+    [SerializeField] private QuestionSetup questionSetup;
 
     public void SetAnswerText(string newText)
     {
@@ -28,6 +28,7 @@ public class AnswerButton : MonoBehaviour
         if (isCorrect)
         {
             Debug.Log("CORRECT ANSWER");
+            questionSetup.Start();
         }
         else
         {
@@ -35,10 +36,10 @@ public class AnswerButton : MonoBehaviour
         }
 
         // Get the next question if there are more in the list
-        //if (questionSetup.questions.Count > 0)
-        //{
-        //    // Generate a new question
-        //    questionSetup.Start();
-        //}
+        if (questionSetup.questions.Count > 0)
+        {
+            // Generate a new question
+            questionSetup.Start();
+        }
     }
 }
