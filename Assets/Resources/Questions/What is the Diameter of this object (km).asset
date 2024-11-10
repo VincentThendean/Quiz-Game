@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93b8224441c3358438a6ec67612d14e8, type: 3}
-  m_Name: Test
+  m_Name: What is the Diameter of this object (km)
   m_EditorClassIdentifier: 
-  question: What is the Mass of Earth (10^24kg) ?
+  question: What is the Diameter of this object (km)?
   category: Earth
   answers:
-  - 5.97
-  - 4.87
-  - 568
-  - 0.642
+  - 12756
+  - 12104
+  - 6792
+  - 120536
