@@ -7,6 +7,8 @@ using TMPro;
 
 public class AnswerButton : MonoBehaviour
 {
+    public GameOverScreen GameOverScreen;
+
     private bool isCorrect;
     [SerializeField] private TextMeshProUGUI answerText;
 
@@ -28,7 +30,8 @@ public class AnswerButton : MonoBehaviour
         if (isCorrect)
         {
             Debug.Log("CORRECT ANSWER");
-            questionSetup.Start();
+            //questionSetup.Start();
+            questionSetup.numCorrect++;
         }
         else
         {
@@ -40,6 +43,10 @@ public class AnswerButton : MonoBehaviour
         {
             // Generate a new question
             questionSetup.Start();
+        }
+        else
+        {
+            GameOverScreen.Setup(questionSetup.numCorrect);
         }
     }
 }

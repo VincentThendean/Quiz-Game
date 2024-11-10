@@ -21,6 +21,8 @@ public class QuestionSetup : MonoBehaviour
     [SerializeField]
     private int correctAnswerChoice;
 
+    public int numCorrect = 0;
+
     private void Awake()
     {
         // Get all the questions ready
@@ -58,6 +60,9 @@ public class QuestionSetup : MonoBehaviour
         currentQuestion = questions[randomQuestionIndex];
         // Remove this question from the list so it will not be repeared (until the game is restarted)
         questions.RemoveAt(randomQuestionIndex);
+
+        //Show current correct answers
+        Debug.Log(numCorrect);
     }
 
     private void SetQuestionValues()
